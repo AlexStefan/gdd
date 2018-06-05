@@ -1,26 +1,17 @@
-﻿using MvvmCross.ViewModels;
+﻿using GDD.Core.Helpers;
+using MvvmCross;
+using MvvmCross.ViewModels;
 
 namespace GDD.Core.ViewModels
 {
     public class SecondViewModel : MvxViewModel
     {
-        private string modelName;
         public string ModelName
         {
             get
             {
-                return modelName;
+                return Mvx.Resolve<IAppInfo>().GetModelName();
             }
-            set
-            {
-                modelName = value;
-                RaisePropertyChanged(nameof(ModelName));
-            }
-        }
-
-        public SecondViewModel()
-        {
-            ModelName = "Nothing";
         }
     }
 }
