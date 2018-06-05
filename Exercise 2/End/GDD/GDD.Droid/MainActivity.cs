@@ -1,11 +1,13 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using GDD.Core.ViewModels;
 
 namespace GDD.Droid
 {
     [Activity(Label = "GDD.Droid", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : MvxAppCompatActivity<MainViewModel>
     {
         int count = 1;
 
