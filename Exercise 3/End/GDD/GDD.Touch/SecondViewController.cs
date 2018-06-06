@@ -4,9 +4,9 @@ using MvvmCross.Platforms.Ios.Views;
 
 namespace GDD.Touch
 {
-	public partial class MainViewController : MvxViewController<MainViewModel>
+	public partial class SecondViewController : MvxViewController<SecondViewModel>
     {
-        public MainViewController() : base("MainViewController", null)
+        public SecondViewController() : base("SecondViewController", null)
         {
         }
 
@@ -14,11 +14,9 @@ namespace GDD.Touch
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-
-			var set = this.CreateBindingSet<MainViewController, MainViewModel>();
-            set.Bind(myButton).To(vm => vm.ChangeValueCommand);
-			set.Bind(btNextController).To(vm => vm.NavigateFurtherCommand);
-            set.Bind(myButton).For("Title").To(vm => vm.ButtonText);
+         
+			var set = this.CreateBindingSet<SecondViewController, SecondViewModel>();
+			set.Bind(lbModel).To(vm => vm.ModelName);
             set.Apply();
         }
 

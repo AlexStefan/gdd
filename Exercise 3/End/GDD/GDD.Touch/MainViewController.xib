@@ -11,8 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
-                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
                 <outlet property="myButton" destination="rav-zM-sRB" id="name-outlet-rav-zM-sRB"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="btNextController" destination="Ayf-iI-j1T" id="name-outlet-Ayf-iI-j1T"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -24,11 +25,18 @@
                     <rect key="frame" x="164" y="318.5" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayf-iI-j1T" misplaced="YES">
+                    <rect key="frame" x="164" y="356" width="46" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Go to next Controller!"/>
+                    <state key="normal" title="Go to next Controller!"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rav-zM-sRB" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="EQG-qk-9lo"/>
+                <constraint firstItem="Ayf-iI-j1T" firstAttribute="top" secondItem="rav-zM-sRB" secondAttribute="bottom" constant="7.5" id="ULz-j5-Dqw"/>
                 <constraint firstItem="rav-zM-sRB" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="e54-pA-mS8"/>
+                <constraint firstItem="Ayf-iI-j1T" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="hAv-7K-tnh"/>
             </constraints>
         </view>
     </objects>

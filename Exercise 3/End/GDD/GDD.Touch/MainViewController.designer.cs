@@ -16,10 +16,19 @@ namespace GDD.Touch
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btNextController { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton myButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (btNextController != null) {
+                btNextController.Dispose ();
+                btNextController = null;
+            }
+
             if (myButton != null) {
                 myButton.Dispose ();
                 myButton = null;
